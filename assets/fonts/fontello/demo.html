@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'web-theme';
+      src: url('./font/web-theme.eot?2394217');
+      src: url('./font/web-theme.eot?2394217#iefix') format('embedded-opentype'),
+           url('./font/web-theme.woff?2394217') format('woff'),
+           url('./font/web-theme.ttf?2394217') format('truetype'),
+           url('./font/web-theme.svg?2394217#web-theme') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "web-theme";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>web-theme <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe800"><i class="demo-icon wt-spin5 animate-spin">&#xe800;</i> <span class="i-name">wt-spin5</span><span class="i-code">0xe800</span></div>
+        <div class="the-icons span3" title="Code: 0xe801"><i class="demo-icon wt-emo-happy">&#xe801;</i> <span class="i-name">wt-emo-happy</span><span class="i-code">0xe801</span></div>
+        <div class="the-icons span3" title="Code: 0xe802"><i class="demo-icon wt-emo-unhappy">&#xe802;</i> <span class="i-name">wt-emo-unhappy</span><span class="i-code">0xe802</span></div>
+        <div class="the-icons span3" title="Code: 0xe803"><i class="demo-icon wt-emo-surprised">&#xe803;</i> <span class="i-name">wt-emo-surprised</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe804"><i class="demo-icon wt-down-open">&#xe804;</i> <span class="i-name">wt-down-open</span><span class="i-code">0xe804</span></div>
+        <div class="the-icons span3" title="Code: 0xe805"><i class="demo-icon wt-left-open">&#xe805;</i> <span class="i-name">wt-left-open</span><span class="i-code">0xe805</span></div>
+        <div class="the-icons span3" title="Code: 0xe806"><i class="demo-icon wt-right-open">&#xe806;</i> <span class="i-name">wt-right-open</span><span class="i-code">0xe806</span></div>
+        <div class="the-icons span3" title="Code: 0xe807"><i class="demo-icon wt-up-open">&#xe807;</i> <span class="i-name">wt-up-open</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe808"><i class="demo-icon wt-star-filled">&#xe808;</i> <span class="i-name">wt-star-filled</span><span class="i-code">0xe808</span></div>
+        <div class="the-icons span3" title="Code: 0xe809"><i class="demo-icon wt-star">&#xe809;</i> <span class="i-name">wt-star</span><span class="i-code">0xe809</span></div>
+        <div class="the-icons span3" title="Code: 0xe80a"><i class="demo-icon wt-heart">&#xe80a;</i> <span class="i-name">wt-heart</span><span class="i-code">0xe80a</span></div>
+        <div class="the-icons span3" title="Code: 0xe80b"><i class="demo-icon wt-heart-filled">&#xe80b;</i> <span class="i-name">wt-heart-filled</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe80c"><i class="demo-icon wt-down-small">&#xe80c;</i> <span class="i-name">wt-down-small</span><span class="i-code">0xe80c</span></div>
+        <div class="the-icons span3" title="Code: 0xe80d"><i class="demo-icon wt-left-small">&#xe80d;</i> <span class="i-name">wt-left-small</span><span class="i-code">0xe80d</span></div>
+        <div class="the-icons span3" title="Code: 0xe80e"><i class="demo-icon wt-right-small">&#xe80e;</i> <span class="i-name">wt-right-small</span><span class="i-code">0xe80e</span></div>
+        <div class="the-icons span3" title="Code: 0xe80f"><i class="demo-icon wt-up-small">&#xe80f;</i> <span class="i-name">wt-up-small</span><span class="i-code">0xe80f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe810"><i class="demo-icon wt-left">&#xe810;</i> <span class="i-name">wt-left</span><span class="i-code">0xe810</span></div>
+        <div class="the-icons span3" title="Code: 0xe811"><i class="demo-icon wt-down">&#xe811;</i> <span class="i-name">wt-down</span><span class="i-code">0xe811</span></div>
+        <div class="the-icons span3" title="Code: 0xe812"><i class="demo-icon wt-right">&#xe812;</i> <span class="i-name">wt-right</span><span class="i-code">0xe812</span></div>
+        <div class="the-icons span3" title="Code: 0xe813"><i class="demo-icon wt-up">&#xe813;</i> <span class="i-name">wt-up</span><span class="i-code">0xe813</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe814"><i class="demo-icon wt-certificate">&#xe814;</i> <span class="i-name">wt-certificate</span><span class="i-code">0xe814</span></div>
+        <div class="the-icons span3" title="Code: 0xe815"><i class="demo-icon wt-certificate-outline">&#xe815;</i> <span class="i-name">wt-certificate-outline</span><span class="i-code">0xe815</span></div>
+        <div class="the-icons span3" title="Code: 0xe816"><i class="demo-icon wt-ok-circle">&#xe816;</i> <span class="i-name">wt-ok-circle</span><span class="i-code">0xe816</span></div>
+        <div class="the-icons span3" title="Code: 0xe817"><i class="demo-icon wt-cancel-circle">&#xe817;</i> <span class="i-name">wt-cancel-circle</span><span class="i-code">0xe817</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe818"><i class="demo-icon wt-plus-circle">&#xe818;</i> <span class="i-name">wt-plus-circle</span><span class="i-code">0xe818</span></div>
+        <div class="the-icons span3" title="Code: 0xe819"><i class="demo-icon wt-minus-circle">&#xe819;</i> <span class="i-name">wt-minus-circle</span><span class="i-code">0xe819</span></div>
+        <div class="the-icons span3" title="Code: 0xe81a"><i class="demo-icon wt-user">&#xe81a;</i> <span class="i-name">wt-user</span><span class="i-code">0xe81a</span></div>
+        <div class="the-icons span3" title="Code: 0xe81b"><i class="demo-icon wt-search">&#xe81b;</i> <span class="i-name">wt-search</span><span class="i-code">0xe81b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe81c"><i class="demo-icon wt-at">&#xe81c;</i> <span class="i-name">wt-at</span><span class="i-code">0xe81c</span></div>
+        <div class="the-icons span3" title="Code: 0xe81d"><i class="demo-icon wt-award">&#xe81d;</i> <span class="i-name">wt-award</span><span class="i-code">0xe81d</span></div>
+        <div class="the-icons span3" title="Code: 0xe81e"><i class="demo-icon wt-mobile">&#xe81e;</i> <span class="i-name">wt-mobile</span><span class="i-code">0xe81e</span></div>
+        <div class="the-icons span3" title="Code: 0xe81f"><i class="demo-icon wt-mobile-alt">&#xe81f;</i> <span class="i-name">wt-mobile-alt</span><span class="i-code">0xe81f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe820"><i class="demo-icon wt-chat">&#xe820;</i> <span class="i-name">wt-chat</span><span class="i-code">0xe820</span></div>
+        <div class="the-icons span3" title="Code: 0xe821"><i class="demo-icon wt-comment">&#xe821;</i> <span class="i-name">wt-comment</span><span class="i-code">0xe821</span></div>
+        <div class="the-icons span3" title="Code: 0xe822"><i class="demo-icon wt-bell">&#xe822;</i> <span class="i-name">wt-bell</span><span class="i-code">0xe822</span></div>
+        <div class="the-icons span3" title="Code: 0xe823"><i class="demo-icon wt-attention">&#xe823;</i> <span class="i-name">wt-attention</span><span class="i-code">0xe823</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe824"><i class="demo-icon wt-lock-open-alt">&#xe824;</i> <span class="i-name">wt-lock-open-alt</span><span class="i-code">0xe824</span></div>
+        <div class="the-icons span3" title="Code: 0xe825"><i class="demo-icon wt-user-1">&#xe825;</i> <span class="i-name">wt-user-1</span><span class="i-code">0xe825</span></div>
+        <div class="the-icons span3" title="Code: 0xe826"><i class="demo-icon wt-user-male">&#xe826;</i> <span class="i-name">wt-user-male</span><span class="i-code">0xe826</span></div>
+        <div class="the-icons span3" title="Code: 0xe827"><i class="demo-icon wt-user-female">&#xe827;</i> <span class="i-name">wt-user-female</span><span class="i-code">0xe827</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe828"><i class="demo-icon wt-users">&#xe828;</i> <span class="i-name">wt-users</span><span class="i-code">0xe828</span></div>
+        <div class="the-icons span3" title="Code: 0xe829"><i class="demo-icon wt-hash">&#xe829;</i> <span class="i-name">wt-hash</span><span class="i-code">0xe829</span></div>
+        <div class="the-icons span3" title="Code: 0xe82a"><i class="demo-icon wt-search-1">&#xe82a;</i> <span class="i-name">wt-search-1</span><span class="i-code">0xe82a</span></div>
+        <div class="the-icons span3" title="Code: 0xe82b"><i class="demo-icon wt-ok">&#xe82b;</i> <span class="i-name">wt-ok</span><span class="i-code">0xe82b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe82c"><i class="demo-icon wt-twitter">&#xe82c;</i> <span class="i-name">wt-twitter</span><span class="i-code">0xe82c</span></div>
+        <div class="the-icons span3" title="Code: 0xe82d"><i class="demo-icon wt-appstore">&#xe82d;</i> <span class="i-name">wt-appstore</span><span class="i-code">0xe82d</span></div>
+        <div class="the-icons span3" title="Code: 0xe82e"><i class="demo-icon wt-windows">&#xe82e;</i> <span class="i-name">wt-windows</span><span class="i-code">0xe82e</span></div>
+        <div class="the-icons span3" title="Code: 0xe82f"><i class="demo-icon wt-youtube">&#xe82f;</i> <span class="i-name">wt-youtube</span><span class="i-code">0xe82f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe830"><i class="demo-icon wt-skype">&#xe830;</i> <span class="i-name">wt-skype</span><span class="i-code">0xe830</span></div>
+        <div class="the-icons span3" title="Code: 0xe831"><i class="demo-icon wt-android">&#xe831;</i> <span class="i-name">wt-android</span><span class="i-code">0xe831</span></div>
+        <div class="the-icons span3" title="Code: 0xe832"><i class="demo-icon wt-pinterest">&#xe832;</i> <span class="i-name">wt-pinterest</span><span class="i-code">0xe832</span></div>
+        <div class="the-icons span3" title="Code: 0xe833"><i class="demo-icon wt-ie">&#xe833;</i> <span class="i-name">wt-ie</span><span class="i-code">0xe833</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe834"><i class="demo-icon wt-google">&#xe834;</i> <span class="i-name">wt-google</span><span class="i-code">0xe834</span></div>
+        <div class="the-icons span3" title="Code: 0xe835"><i class="demo-icon wt-yahoo">&#xe835;</i> <span class="i-name">wt-yahoo</span><span class="i-code">0xe835</span></div>
+        <div class="the-icons span3" title="Code: 0xe836"><i class="demo-icon wt-github-circled">&#xe836;</i> <span class="i-name">wt-github-circled</span><span class="i-code">0xe836</span></div>
+        <div class="the-icons span3" title="Code: 0xe837"><i class="demo-icon wt-facebook-rect">&#xe837;</i> <span class="i-name">wt-facebook-rect</span><span class="i-code">0xe837</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe838"><i class="demo-icon wt-dropbox">&#xe838;</i> <span class="i-name">wt-dropbox</span><span class="i-code">0xe838</span></div>
+        <div class="the-icons span3" title="Code: 0xe839"><i class="demo-icon wt-tumblr-rect">&#xe839;</i> <span class="i-name">wt-tumblr-rect</span><span class="i-code">0xe839</span></div>
+        <div class="the-icons span3" title="Code: 0xe83a"><i class="demo-icon wt-googleplus-rect">&#xe83a;</i> <span class="i-name">wt-googleplus-rect</span><span class="i-code">0xe83a</span></div>
+        <div class="the-icons span3" title="Code: 0xe83b"><i class="demo-icon wt-linkedin-rect">&#xe83b;</i> <span class="i-name">wt-linkedin-rect</span><span class="i-code">0xe83b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83c"><i class="demo-icon wt-instagram-filled">&#xe83c;</i> <span class="i-name">wt-instagram-filled</span><span class="i-code">0xe83c</span></div>
+        <div class="the-icons span3" title="Code: 0xe83d"><i class="demo-icon wt-instagram">&#xe83d;</i> <span class="i-name">wt-instagram</span><span class="i-code">0xe83d</span></div>
+        <div class="the-icons span3" title="Code: 0xe83e"><i class="demo-icon wt-win8">&#xe83e;</i> <span class="i-name">wt-win8</span><span class="i-code">0xe83e</span></div>
+        <div class="the-icons span3" title="Code: 0xe83f"><i class="demo-icon wt-search-2">&#xe83f;</i> <span class="i-name">wt-search-2</span><span class="i-code">0xe83f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe840"><i class="demo-icon wt-bell-1">&#xe840;</i> <span class="i-name">wt-bell-1</span><span class="i-code">0xe840</span></div>
+        <div class="the-icons span3" title="Code: 0xe841"><i class="demo-icon wt-bell-alt">&#xe841;</i> <span class="i-name">wt-bell-alt</span><span class="i-code">0xe841</span></div>
+        <div class="the-icons span3" title="Code: 0xe842"><i class="demo-icon wt-bell-off">&#xe842;</i> <span class="i-name">wt-bell-off</span><span class="i-code">0xe842</span></div>
+        <div class="the-icons span3" title="Code: 0xe843"><i class="demo-icon wt-bell-off-empty">&#xe843;</i> <span class="i-name">wt-bell-off-empty</span><span class="i-code">0xe843</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe844"><i class="demo-icon wt-toggle-on">&#xe844;</i> <span class="i-name">wt-toggle-on</span><span class="i-code">0xe844</span></div>
+        <div class="the-icons span3" title="Code: 0xe845"><i class="demo-icon wt-toggle-off">&#xe845;</i> <span class="i-name">wt-toggle-off</span><span class="i-code">0xe845</span></div>
+        <div class="the-icons span3" title="Code: 0xe846"><i class="demo-icon wt-whatsapp">&#xe846;</i> <span class="i-name">wt-whatsapp</span><span class="i-code">0xe846</span></div>
+        <div class="the-icons span3" title="Code: 0xe847"><i class="demo-icon wt-youtube-play">&#xe847;</i> <span class="i-name">wt-youtube-play</span><span class="i-code">0xe847</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe848"><i class="demo-icon wt-blank">&#xe848;</i> <span class="i-name">wt-blank</span><span class="i-code">0xe848</span></div>
+        <div class="the-icons span3" title="Code: 0xe849"><i class="demo-icon wt-quote">&#xe849;</i> <span class="i-name">wt-quote</span><span class="i-code">0xe849</span></div>
+        <div class="the-icons span3" title="Code: 0xe84a"><i class="demo-icon wt-feather">&#xe84a;</i> <span class="i-name">wt-feather</span><span class="i-code">0xe84a</span></div>
+        <div class="the-icons span3" title="Code: 0xe84b"><i class="demo-icon wt-pencil">&#xe84b;</i> <span class="i-name">wt-pencil</span><span class="i-code">0xe84b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84c"><i class="demo-icon wt-folder">&#xe84c;</i> <span class="i-name">wt-folder</span><span class="i-code">0xe84c</span></div>
+        <div class="the-icons span3" title="Code: 0xe84d"><i class="demo-icon wt-bookmarks">&#xe84d;</i> <span class="i-name">wt-bookmarks</span><span class="i-code">0xe84d</span></div>
+        <div class="the-icons span3" title="Code: 0xe84e"><i class="demo-icon wt-bookmark">&#xe84e;</i> <span class="i-name">wt-bookmark</span><span class="i-code">0xe84e</span></div>
+        <div class="the-icons span3" title="Code: 0xe84f"><i class="demo-icon wt-thumbs-up">&#xe84f;</i> <span class="i-name">wt-thumbs-up</span><span class="i-code">0xe84f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe850"><i class="demo-icon wt-thumbs-down">&#xe850;</i> <span class="i-name">wt-thumbs-down</span><span class="i-code">0xe850</span></div>
+        <div class="the-icons span3" title="Code: 0xe851"><i class="demo-icon wt-flag">&#xe851;</i> <span class="i-name">wt-flag</span><span class="i-code">0xe851</span></div>
+        <div class="the-icons span3" title="Code: 0xe852"><i class="demo-icon wt-minus-circled">&#xe852;</i> <span class="i-name">wt-minus-circled</span><span class="i-code">0xe852</span></div>
+        <div class="the-icons span3" title="Code: 0xe853"><i class="demo-icon wt-ccw">&#xe853;</i> <span class="i-name">wt-ccw</span><span class="i-code">0xe853</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe854"><i class="demo-icon wt-cw">&#xe854;</i> <span class="i-name">wt-cw</span><span class="i-code">0xe854</span></div>
+        <div class="the-icons span3" title="Code: 0xe855"><i class="demo-icon wt-arrows-ccw">&#xe855;</i> <span class="i-name">wt-arrows-ccw</span><span class="i-code">0xe855</span></div>
+        <div class="the-icons span3" title="Code: 0xe856"><i class="demo-icon wt-dot">&#xe856;</i> <span class="i-name">wt-dot</span><span class="i-code">0xe856</span></div>
+        <div class="the-icons span3" title="Code: 0xe857"><i class="demo-icon wt-dot-2">&#xe857;</i> <span class="i-name">wt-dot-2</span><span class="i-code">0xe857</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe858"><i class="demo-icon wt-dot-3">&#xe858;</i> <span class="i-name">wt-dot-3</span><span class="i-code">0xe858</span></div>
+        <div class="the-icons span3" title="Code: 0xe859"><i class="demo-icon wt-floppy">&#xe859;</i> <span class="i-name">wt-floppy</span><span class="i-code">0xe859</span></div>
+        <div class="the-icons span3" title="Code: 0xe85a"><i class="demo-icon wt-megaphone">&#xe85a;</i> <span class="i-name">wt-megaphone</span><span class="i-code">0xe85a</span></div>
+        <div class="the-icons span3" title="Code: 0xe85b"><i class="demo-icon wt-graduation-cap">&#xe85b;</i> <span class="i-name">wt-graduation-cap</span><span class="i-code">0xe85b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85c"><i class="demo-icon wt-inbox">&#xe85c;</i> <span class="i-name">wt-inbox</span><span class="i-code">0xe85c</span></div>
+        <div class="the-icons span3" title="Code: 0xe85d"><i class="demo-icon wt-install">&#xe85d;</i> <span class="i-name">wt-install</span><span class="i-code">0xe85d</span></div>
+        <div class="the-icons span3" title="Code: 0xe85e"><i class="demo-icon wt-th-large">&#xe85e;</i> <span class="i-name">wt-th-large</span><span class="i-code">0xe85e</span></div>
+        <div class="the-icons span3" title="Code: 0xe85f"><i class="demo-icon wt-th">&#xe85f;</i> <span class="i-name">wt-th</span><span class="i-code">0xe85f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe860"><i class="demo-icon wt-th-large-outline">&#xe860;</i> <span class="i-name">wt-th-large-outline</span><span class="i-code">0xe860</span></div>
+        <div class="the-icons span3" title="Code: 0xe861"><i class="demo-icon wt-th-list">&#xe861;</i> <span class="i-name">wt-th-list</span><span class="i-code">0xe861</span></div>
+        <div class="the-icons span3" title="Code: 0xe862"><i class="demo-icon wt-menu">&#xe862;</i> <span class="i-name">wt-menu</span><span class="i-code">0xe862</span></div>
+        <div class="the-icons span3" title="Code: 0xe863"><i class="demo-icon wt-block">&#xe863;</i> <span class="i-name">wt-block</span><span class="i-code">0xe863</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe864"><i class="demo-icon wt-resize-full">&#xe864;</i> <span class="i-name">wt-resize-full</span><span class="i-code">0xe864</span></div>
+        <div class="the-icons span3" title="Code: 0xe865"><i class="demo-icon wt-resize-normal">&#xe865;</i> <span class="i-name">wt-resize-normal</span><span class="i-code">0xe865</span></div>
+        <div class="the-icons span3" title="Code: 0xe866"><i class="demo-icon wt-wifi">&#xe866;</i> <span class="i-name">wt-wifi</span><span class="i-code">0xe866</span></div>
+        <div class="the-icons span3" title="Code: 0xe867"><i class="demo-icon wt-key">&#xe867;</i> <span class="i-name">wt-key</span><span class="i-code">0xe867</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe868"><i class="demo-icon wt-power">&#xe868;</i> <span class="i-name">wt-power</span><span class="i-code">0xe868</span></div>
+        <div class="the-icons span3" title="Code: 0xe869"><i class="demo-icon wt-bullhorn">&#xe869;</i> <span class="i-name">wt-bullhorn</span><span class="i-code">0xe869</span></div>
+        <div class="the-icons span3" title="Code: 0xe86a"><i class="demo-icon wt-down-open-1">&#xe86a;</i> <span class="i-name">wt-down-open-1</span><span class="i-code">0xe86a</span></div>
+        <div class="the-icons span3" title="Code: 0xe86b"><i class="demo-icon wt-left-open-1">&#xe86b;</i> <span class="i-name">wt-left-open-1</span><span class="i-code">0xe86b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86c"><i class="demo-icon wt-right-open-1">&#xe86c;</i> <span class="i-name">wt-right-open-1</span><span class="i-code">0xe86c</span></div>
+        <div class="the-icons span3" title="Code: 0xe86d"><i class="demo-icon wt-up-open-1">&#xe86d;</i> <span class="i-name">wt-up-open-1</span><span class="i-code">0xe86d</span></div>
+        <div class="the-icons span3" title="Code: 0xe86e"><i class="demo-icon wt-down-1">&#xe86e;</i> <span class="i-name">wt-down-1</span><span class="i-code">0xe86e</span></div>
+        <div class="the-icons span3" title="Code: 0xe86f"><i class="demo-icon wt-left-1">&#xe86f;</i> <span class="i-name">wt-left-1</span><span class="i-code">0xe86f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe870"><i class="demo-icon wt-right-1">&#xe870;</i> <span class="i-name">wt-right-1</span><span class="i-code">0xe870</span></div>
+        <div class="the-icons span3" title="Code: 0xe871"><i class="demo-icon wt-up-1">&#xe871;</i> <span class="i-name">wt-up-1</span><span class="i-code">0xe871</span></div>
+        <div class="the-icons span3" title="Code: 0xe872"><i class="demo-icon wt-cog">&#xe872;</i> <span class="i-name">wt-cog</span><span class="i-code">0xe872</span></div>
+        <div class="the-icons span3" title="Code: 0xe873"><i class="demo-icon wt-lock">&#xe873;</i> <span class="i-name">wt-lock</span><span class="i-code">0xe873</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe874"><i class="demo-icon wt-lock-alt">&#xe874;</i> <span class="i-name">wt-lock-alt</span><span class="i-code">0xe874</span></div>
+        <div class="the-icons span3" title="Code: 0xe875"><i class="demo-icon wt-lock-open">&#xe875;</i> <span class="i-name">wt-lock-open</span><span class="i-code">0xe875</span></div>
+        <div class="the-icons span3" title="Code: 0xe876"><i class="demo-icon wt-menu-1">&#xe876;</i> <span class="i-name">wt-menu-1</span><span class="i-code">0xe876</span></div>
+        <div class="the-icons span3" title="Code: 0xe877"><i class="demo-icon wt-th-thumb">&#xe877;</i> <span class="i-name">wt-th-thumb</span><span class="i-code">0xe877</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe878"><i class="demo-icon wt-th-thumb-empty">&#xe878;</i> <span class="i-name">wt-th-thumb-empty</span><span class="i-code">0xe878</span></div>
+        <div class="the-icons span3" title="Code: 0xe879"><i class="demo-icon wt-female">&#xe879;</i> <span class="i-name">wt-female</span><span class="i-code">0xe879</span></div>
+        <div class="the-icons span3" title="Code: 0xe87a"><i class="demo-icon wt-male">&#xe87a;</i> <span class="i-name">wt-male</span><span class="i-code">0xe87a</span></div>
+        <div class="the-icons span3" title="Code: 0xe87b"><i class="demo-icon wt-chart-bar">&#xe87b;</i> <span class="i-name">wt-chart-bar</span><span class="i-code">0xe87b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87c"><i class="demo-icon wt-comment-alt">&#xe87c;</i> <span class="i-name">wt-comment-alt</span><span class="i-code">0xe87c</span></div>
+        <div class="the-icons span3" title="Code: 0xe87d"><i class="demo-icon wt-chat-1">&#xe87d;</i> <span class="i-name">wt-chat-1</span><span class="i-code">0xe87d</span></div>
+        <div class="the-icons span3" title="Code: 0xe87e"><i class="demo-icon wt-attention-1">&#xe87e;</i> <span class="i-name">wt-attention-1</span><span class="i-code">0xe87e</span></div>
+        <div class="the-icons span3" title="Code: 0xe87f"><i class="demo-icon wt-reply-all">&#xe87f;</i> <span class="i-name">wt-reply-all</span><span class="i-code">0xe87f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe880"><i class="demo-icon wt-reply">&#xe880;</i> <span class="i-name">wt-reply</span><span class="i-code">0xe880</span></div>
+        <div class="the-icons span3" title="Code: 0xe881"><i class="demo-icon wt-picture">&#xe881;</i> <span class="i-name">wt-picture</span><span class="i-code">0xe881</span></div>
+        <div class="the-icons span3" title="Code: 0xe882"><i class="demo-icon wt-th-1">&#xe882;</i> <span class="i-name">wt-th-1</span><span class="i-code">0xe882</span></div>
+        <div class="the-icons span3" title="Code: 0xe883"><i class="demo-icon wt-th-large-1">&#xe883;</i> <span class="i-name">wt-th-large-1</span><span class="i-code">0xe883</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe884"><i class="demo-icon wt-th-list-1">&#xe884;</i> <span class="i-name">wt-th-list-1</span><span class="i-code">0xe884</span></div>
+        <div class="the-icons span3" title="Code: 0xe885"><i class="demo-icon wt-folder-1">&#xe885;</i> <span class="i-name">wt-folder-1</span><span class="i-code">0xe885</span></div>
+        <div class="the-icons span3" title="Code: 0xe886"><i class="demo-icon wt-archive">&#xe886;</i> <span class="i-name">wt-archive</span><span class="i-code">0xe886</span></div>
+        <div class="the-icons span3" title="Code: 0xe887"><i class="demo-icon wt-cog-1">&#xe887;</i> <span class="i-name">wt-cog-1</span><span class="i-code">0xe887</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe888"><i class="demo-icon wt-signal">&#xe888;</i> <span class="i-name">wt-signal</span><span class="i-code">0xe888</span></div>
+        <div class="the-icons span3" title="Code: 0xe889"><i class="demo-icon wt-cancel">&#xe889;</i> <span class="i-name">wt-cancel</span><span class="i-code">0xe889</span></div>
+        <div class="the-icons span3" title="Code: 0xe88a"><i class="demo-icon wt-ok-1">&#xe88a;</i> <span class="i-name">wt-ok-1</span><span class="i-code">0xe88a</span></div>
+        <div class="the-icons span3" title="Code: 0xe88b"><i class="demo-icon wt-attach">&#xe88b;</i> <span class="i-name">wt-attach</span><span class="i-code">0xe88b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88c"><i class="demo-icon wt-search-3">&#xe88c;</i> <span class="i-name">wt-search-3</span><span class="i-code">0xe88c</span></div>
+        <div class="the-icons span3" title="Code: 0xe88d"><i class="demo-icon wt-user-2">&#xe88d;</i> <span class="i-name">wt-user-2</span><span class="i-code">0xe88d</span></div>
+        <div class="the-icons span3" title="Code: 0xe88e"><i class="demo-icon wt-video">&#xe88e;</i> <span class="i-name">wt-video</span><span class="i-code">0xe88e</span></div>
+        <div class="the-icons span3" title="Code: 0xe88f"><i class="demo-icon wt-video-1">&#xe88f;</i> <span class="i-name">wt-video-1</span><span class="i-code">0xe88f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe890"><i class="demo-icon wt-videocam">&#xe890;</i> <span class="i-name">wt-videocam</span><span class="i-code">0xe890</span></div>
+        <div class="the-icons span3" title="Code: 0xe891"><i class="demo-icon wt-picture-1">&#xe891;</i> <span class="i-name">wt-picture-1</span><span class="i-code">0xe891</span></div>
+        <div class="the-icons span3" title="Code: 0xe892"><i class="demo-icon wt-share">&#xe892;</i> <span class="i-name">wt-share</span><span class="i-code">0xe892</span></div>
+        <div class="the-icons span3" title="Code: 0xe893"><i class="demo-icon wt-phone">&#xe893;</i> <span class="i-name">wt-phone</span><span class="i-code">0xe893</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe894"><i class="demo-icon wt-basket">&#xe894;</i> <span class="i-name">wt-basket</span><span class="i-code">0xe894</span></div>
+        <div class="the-icons span3" title="Code: 0xe895"><i class="demo-icon wt-calendar">&#xe895;</i> <span class="i-name">wt-calendar</span><span class="i-code">0xe895</span></div>
+        <div class="the-icons span3" title="Code: 0xe896"><i class="demo-icon wt-lock-1">&#xe896;</i> <span class="i-name">wt-lock-1</span><span class="i-code">0xe896</span></div>
+        <div class="the-icons span3" title="Code: 0xe897"><i class="demo-icon wt-lock-open-1">&#xe897;</i> <span class="i-name">wt-lock-open-1</span><span class="i-code">0xe897</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe898"><i class="demo-icon wt-search-4">&#xe898;</i> <span class="i-name">wt-search-4</span><span class="i-code">0xe898</span></div>
+        <div class="the-icons span3" title="Code: 0xe899"><i class="demo-icon wt-note-beamed">&#xe899;</i> <span class="i-name">wt-note-beamed</span><span class="i-code">0xe899</span></div>
+        <div class="the-icons span3" title="Code: 0xe89a"><i class="demo-icon wt-note">&#xe89a;</i> <span class="i-name">wt-note</span><span class="i-code">0xe89a</span></div>
+        <div class="the-icons span3" title="Code: 0xe89b"><i class="demo-icon wt-picture-2">&#xe89b;</i> <span class="i-name">wt-picture-2</span><span class="i-code">0xe89b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89c"><i class="demo-icon wt-camera">&#xe89c;</i> <span class="i-name">wt-camera</span><span class="i-code">0xe89c</span></div>
+        <div class="the-icons span3" title="Code: 0xe89d"><i class="demo-icon wt-db-shape">&#xe89d;</i> <span class="i-name">wt-db-shape</span><span class="i-code">0xe89d</span></div>
+        <div class="the-icons span3" title="Code: 0xe89e"><i class="demo-icon wt-location">&#xe89e;</i> <span class="i-name">wt-location</span><span class="i-code">0xe89e</span></div>
+        <div class="the-icons span3" title="Code: 0xe89f"><i class="demo-icon wt-warning">&#xe89f;</i> <span class="i-name">wt-warning</span><span class="i-code">0xe89f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a0"><i class="demo-icon wt-attention-filled">&#xe8a0;</i> <span class="i-name">wt-attention-filled</span><span class="i-code">0xe8a0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a1"><i class="demo-icon wt-warning-empty">&#xe8a1;</i> <span class="i-name">wt-warning-empty</span><span class="i-code">0xe8a1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a2"><i class="demo-icon wt-attention-2">&#xe8a2;</i> <span class="i-name">wt-attention-2</span><span class="i-code">0xe8a2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a3"><i class="demo-icon wt-location-alt">&#xe8a3;</i> <span class="i-name">wt-location-alt</span><span class="i-code">0xe8a3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a4"><i class="demo-icon wt-export">&#xe8a4;</i> <span class="i-name">wt-export</span><span class="i-code">0xe8a4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a5"><i class="demo-icon wt-pinboard">&#xe8a5;</i> <span class="i-name">wt-pinboard</span><span class="i-code">0xe8a5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a6"><i class="demo-icon wt-down-hand">&#xe8a6;</i> <span class="i-name">wt-down-hand</span><span class="i-code">0xe8a6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a7"><i class="demo-icon wt-left-hand">&#xe8a7;</i> <span class="i-name">wt-left-hand</span><span class="i-code">0xe8a7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a8"><i class="demo-icon wt-right-hand">&#xe8a8;</i> <span class="i-name">wt-right-hand</span><span class="i-code">0xe8a8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a9"><i class="demo-icon wt-up-hand">&#xe8a9;</i> <span class="i-name">wt-up-hand</span><span class="i-code">0xe8a9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8aa"><i class="demo-icon wt-asterisk">&#xe8aa;</i> <span class="i-name">wt-asterisk</span><span class="i-code">0xe8aa</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ab"><i class="demo-icon wt-trash">&#xe8ab;</i> <span class="i-name">wt-trash</span><span class="i-code">0xe8ab</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ac"><i class="demo-icon wt-flight">&#xe8ac;</i> <span class="i-name">wt-flight</span><span class="i-code">0xe8ac</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ad"><i class="demo-icon wt-colon">&#xe8ad;</i> <span class="i-name">wt-colon</span><span class="i-code">0xe8ad</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ae"><i class="demo-icon wt-semicolon">&#xe8ae;</i> <span class="i-name">wt-semicolon</span><span class="i-code">0xe8ae</span></div>
+        <div class="the-icons span3" title="Code: 0xe8af"><i class="demo-icon wt-globe">&#xe8af;</i> <span class="i-name">wt-globe</span><span class="i-code">0xe8af</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b0"><i class="demo-icon wt-calendar-1">&#xe8b0;</i> <span class="i-name">wt-calendar-1</span><span class="i-code">0xe8b0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b1"><i class="demo-icon wt-eye">&#xe8b1;</i> <span class="i-name">wt-eye</span><span class="i-code">0xe8b1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b2"><i class="demo-icon wt-th-list-2">&#xe8b2;</i> <span class="i-name">wt-th-list-2</span><span class="i-code">0xe8b2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b3"><i class="demo-icon wt-calendar-2">&#xe8b3;</i> <span class="i-name">wt-calendar-2</span><span class="i-code">0xe8b3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b4"><i class="demo-icon wt-cogs">&#xe8b4;</i> <span class="i-name">wt-cogs</span><span class="i-code">0xe8b4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b5"><i class="demo-icon wt-wrench">&#xe8b5;</i> <span class="i-name">wt-wrench</span><span class="i-code">0xe8b5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b6"><i class="demo-icon wt-slack">&#xe8b6;</i> <span class="i-name">wt-slack</span><span class="i-code">0xe8b6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b7"><i class="demo-icon wt-back-in-time">&#xe8b7;</i> <span class="i-name">wt-back-in-time</span><span class="i-code">0xe8b7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b8"><i class="demo-icon wt-play-1">&#xe8b8;</i> <span class="i-name">wt-play-1</span><span class="i-code">0xe8b8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b9"><i class="demo-icon wt-stop-1">&#xe8b9;</i> <span class="i-name">wt-stop-1</span><span class="i-code">0xe8b9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ba"><i class="demo-icon wt-pause-1">&#xe8ba;</i> <span class="i-name">wt-pause-1</span><span class="i-code">0xe8ba</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bb"><i class="demo-icon wt-record-1">&#xe8bb;</i> <span class="i-name">wt-record-1</span><span class="i-code">0xe8bb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8bc"><i class="demo-icon wt-to-end">&#xe8bc;</i> <span class="i-name">wt-to-end</span><span class="i-code">0xe8bc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bd"><i class="demo-icon wt-to-start">&#xe8bd;</i> <span class="i-name">wt-to-start</span><span class="i-code">0xe8bd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8be"><i class="demo-icon wt-fast-forward">&#xe8be;</i> <span class="i-name">wt-fast-forward</span><span class="i-code">0xe8be</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bf"><i class="demo-icon wt-fast-backward">&#xe8bf;</i> <span class="i-name">wt-fast-backward</span><span class="i-code">0xe8bf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c0"><i class="demo-icon wt-list-add">&#xe8c0;</i> <span class="i-name">wt-list-add</span><span class="i-code">0xe8c0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c1"><i class="demo-icon wt-record-outline">&#xe8c1;</i> <span class="i-name">wt-record-outline</span><span class="i-code">0xe8c1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c2"><i class="demo-icon wt-check">&#xe8c2;</i> <span class="i-name">wt-check</span><span class="i-code">0xe8c2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c3"><i class="demo-icon wt-ccw-1">&#xe8c3;</i> <span class="i-name">wt-ccw-1</span><span class="i-code">0xe8c3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c4"><i class="demo-icon wt-tag">&#xe8c4;</i> <span class="i-name">wt-tag</span><span class="i-code">0xe8c4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c5"><i class="demo-icon wt-retweet">&#xe8c5;</i> <span class="i-name">wt-retweet</span><span class="i-code">0xe8c5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c6"><i class="demo-icon wt-emo-sleep">&#xe8c6;</i> <span class="i-name">wt-emo-sleep</span><span class="i-code">0xe8c6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c7"><i class="demo-icon wt-certificate-1">&#xe8c7;</i> <span class="i-name">wt-certificate-1</span><span class="i-code">0xe8c7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c8"><i class="demo-icon wt-dot-circled">&#xe8c8;</i> <span class="i-name">wt-dot-circled</span><span class="i-code">0xe8c8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c9"><i class="demo-icon wt-asterisk-1">&#xe8c9;</i> <span class="i-name">wt-asterisk-1</span><span class="i-code">0xe8c9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ca"><i class="demo-icon wt-bank">&#xe8ca;</i> <span class="i-name">wt-bank</span><span class="i-code">0xe8ca</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cb"><i class="demo-icon wt-home">&#xe8cb;</i> <span class="i-name">wt-home</span><span class="i-code">0xe8cb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8cc"><i class="demo-icon wt-direction">&#xe8cc;</i> <span class="i-name">wt-direction</span><span class="i-code">0xe8cc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cd"><i class="demo-icon wt-direction-outline">&#xe8cd;</i> <span class="i-name">wt-direction-outline</span><span class="i-code">0xe8cd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ce"><i class="demo-icon wt-pencil-1">&#xe8ce;</i> <span class="i-name">wt-pencil-1</span><span class="i-code">0xe8ce</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cf"><i class="demo-icon wt-pen">&#xe8cf;</i> <span class="i-name">wt-pen</span><span class="i-code">0xe8cf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d0"><i class="demo-icon wt-award-1">&#xe8d0;</i> <span class="i-name">wt-award-1</span><span class="i-code">0xe8d0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d1"><i class="demo-icon wt-award-empty">&#xe8d1;</i> <span class="i-name">wt-award-empty</span><span class="i-code">0xe8d1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d2"><i class="demo-icon wt-tools">&#xe8d2;</i> <span class="i-name">wt-tools</span><span class="i-code">0xe8d2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d3"><i class="demo-icon wt-lamp">&#xe8d3;</i> <span class="i-name">wt-lamp</span><span class="i-code">0xe8d3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d4"><i class="demo-icon wt-zoom-in">&#xe8d4;</i> <span class="i-name">wt-zoom-in</span><span class="i-code">0xe8d4</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c3"><i class="demo-icon wt-android-search">&#xf1c3;</i> <span class="i-name">wt-android-search</span><span class="i-code">0xf1c3</span></div>
+        <div class="the-icons span3" title="Code: 0xf209"><i class="demo-icon wt-android-contact">&#xf209;</i> <span class="i-name">wt-android-contact</span><span class="i-code">0xf209</span></div>
+        <div class="the-icons span3" title="Code: 0xf266"><i class="demo-icon wt-android-chat">&#xf266;</i> <span class="i-name">wt-android-chat</span><span class="i-code">0xf266</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
+  </body>
+</html>

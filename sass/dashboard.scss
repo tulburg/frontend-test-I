@@ -1,0 +1,46 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "../fonts/circular/stylesheet.css";
+body { @include setfont($normal-font, normal, "Circular"); background-color: darken($bg-white, 2%); display: table; height: 100%; width: 100%; min-height: 100vh; }
+input,button { @include setfont($normal-font, normal, "Circular"); }
+
+.container { background-color: darken($bg-white, 2%); display: flex; align-items: center; justify-content: center; min-height: 100%; width: 100%; }
+.sidebar { position: fixed; width: 260px; background-color: $bg-white; padding: $large-margin; left: 0px; top: 0px; height: 100%; }
+.sidebar .account { color: lighten($color-black, 15%); }
+.sidebar .header { height: 34px; display: flex; align-items: center; justify-content: center; }
+.sidebar .header .logo { max-width: 25%; flex: 1; align-self: flex-start; height: 100%; }
+.sidebar .header .logo img { width: 30px; }
+.sidebar .header .account { min-width: 75%; flex: 1; align-self: center; text-align: right; }
+
+.sidebar .search-box { font-size: 12px; height: 30px; border: 1px solid darken($bg-white, 10%); border-radius: 4px; display: flex; align-items: center; margin-top: 15px; }
+.sidebar .search-box .icon { margin-left: 5px; }
+.sidebar .search-box input { font-size: 12px; display: inline; margin: 0px; padding: 0px; margin-left: 5px; width: 100%; outline: 0px; }
+.sidebar .title { font-weight: 100; color: lighten($bg-black, 15%); margin-top: 20px; margin-bottom: 10px; letter-spacing: 2px; }
+.sidebar .start-btn { padding: 8px 30px; align-self: center; }
+.sidebar .action { display: flex; align-items: center; justify-content: center; margin: 40px auto; }
+
+.sidebar .footer { background-color: $bg-white; position: absolute; bottom: 0px; left: 10px; width: 90%; height: auto; border-top: 1px solid darken($bg-white, 10%); }
+
+
+
+button.blue { @include darken_hover_active($app-blue); }
+button.sm-font { font-size: 12px; }
+
+ul.list.mini { margin-left: -10px; }
+ul.list.mini li .addon { width: 15%; padding: 0px; margin-top: 0px; margin-left: 5px; }
+ul.list.mini li .addon img { width: 100%; border-radius: 4px; }
+ul.list.mini li .content { border: 0px; width: auto; padding: 0px; max-width: 75%; }
+ul.list.mini li .content .heading { font-size: 14px; color: lighten($color-black, 10%); line-height: 1.2 !important; margin: 0px; }
+ul.list.mini li .content .heading span { color: darken($color-white, 50%); font-size: 12px; }
+ul.list.mini li { @include darken_hover_active($bg-white); border-radius: 4px; margin: 5px auto; padding: 10px 5px; cursor: default; }
+
+ul.list.mini.alt { margin-left: -5px; }
+ul.list.mini.alt li .addon { color: $app-blue; font-size: 18px; text-align: right; display: flex; align-content: center; justify-content: flex-end; margin-right: 3px; transition: all .2s ease-in-out; }
+ul.list.mini.alt li { border: 1px solid transparent; }
+ul.list.mini.alt li:hover { background-color: $bg-white; border: 1px solid darken($bg-white, 10%); }
+ul.list.mini.alt li .content { max-width: 80%; }
+ul.list.mini.alt li:hover > .addon { width: 10%; }
+
+
+
+
