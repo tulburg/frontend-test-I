@@ -25,7 +25,7 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .board { background-color: $bg-white; border: 1px solid darken($bg-white, 10%); border-radius: 3px; width: 1024px; height: 768px; margin-left: 260px; }
 .board .heading { font-size: 18px; font-weight: bold; color: lighten($color-black, 30%); padding: 10px 20px; border-bottom: 1px solid darken($bg-white, 10%); height: 45px; }
 .board .content { display: flex; width: 100%; height: calc(100% - 45px); overflow-y: scroll; }
-.board .content .left { width: 70%; border-right: 1px solid darken($bg-white, 10%); }
+.board .content .left { width: 70%; border-right: 1px solid darken($bg-white, 10%); position: relative; }
 .board .content .left > .post:first-child { margin-top: 40px; }
 .board .content .right { width: 30%; }
 
@@ -52,7 +52,15 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .post .bubble .file span { color: darken($bg-white, 40%); margin-left: 10px; }
 
 
-.marker { display: flex; align-items: center; justify-content: center; margin: 20px auto; height: 20px; background-color: $bg-white; }
+.message-box { position: absolute; bottom: 10px; left: 15px; border: 1px solid darken($bg-white, 10%); border-radius: 5px; width: calc(100% - 30px); }
+.message-box textarea { width: calc(100% - 20px); height: calc(100% - 50px); padding: 10px; background-color: transparent; outline: 0px; resize: none; }
+.message-box .action-pane { display: flex; }
+.message-box .action-pane .actions { width: 40%; flex: 1; align-self: flex-start; margin-top: 10px; margin-left: 10px; }
+.message-box .action-pane .actions a { padding: 0px; @include darken_color_hover(lighten($app-blue, 20%)); }
+.message-box .action-pane button { align-self: flex-end; margin-bottom: 10px; padding: 8px 25px; }
+
+
+.marker { display: flex; align-items: center; justify-content: center; margin: 20px auto; height: 20px; background-color: $bg-white; border: 0px; }
 .marker .separator { background-color: darken($bg-white, 10%); height: 1px; width: 60%; }
 .marker span { position: absolute; text-transform: uppercase; background-color: inherit; padding: 0px 20px; }
 .marker.new span { color: $color-red; font-size: 12px; letter-spacing: 3px; }
