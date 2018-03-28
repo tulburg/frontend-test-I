@@ -272,6 +272,38 @@ input, button {
 .post .bubble .collage .item:hover > .overlay {
   opacity: 1; }
 
+.post .bubble .file {
+  color: #1892F4;
+  margin-top: 10px; }
+
+.post .bubble .file span {
+  color: #999999;
+  margin-left: 10px; }
+
+.marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  height: 20px;
+  background-color: #ffffff; }
+
+.marker .separator {
+  background-color: #e6e6e6;
+  height: 1px;
+  width: 60%; }
+
+.marker span {
+  position: absolute;
+  text-transform: uppercase;
+  background-color: inherit;
+  padding: 0px 20px; }
+
+.marker.new span {
+  color: #ef4056;
+  font-size: 12px;
+  letter-spacing: 3px; }
+
 button.blue {
   background-color: #1892F4; }
   button.blue:hover {

@@ -48,6 +48,14 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .post .bubble .collage .item img { border-radius: 5px; max-width: 100%; }
 .post .bubble .collage .item .overlay { transition: all .4s ease-in-out; position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; background-color: rgba(0,15,50,0.7); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: $color-white; opacity: 0; }
 .post .bubble .collage .item:hover > .overlay { opacity: 1; }
+.post .bubble .file { color: $app-blue; margin-top: 10px; }
+.post .bubble .file span { color: darken($bg-white, 40%); margin-left: 10px; }
+
+
+.marker { display: flex; align-items: center; justify-content: center; margin: 20px auto; height: 20px; background-color: $bg-white; }
+.marker .separator { background-color: darken($bg-white, 10%); height: 1px; width: 60%; }
+.marker span { position: absolute; text-transform: uppercase; background-color: inherit; padding: 0px 20px; }
+.marker.new span { color: $color-red; font-size: 12px; letter-spacing: 3px; }
 
 
 

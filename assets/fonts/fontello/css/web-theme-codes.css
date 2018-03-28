@@ -91,7 +91,7 @@
 .wt-floppy:before { content: '\e859'; } /* '' */
 .wt-megaphone:before { content: '\e85a'; } /* '' */
 .wt-graduation-cap:before { content: '\e85b'; } /* '' */
-.wt-inbox:before { content: '\e85c'; } /* '' */
+.wt-inbox-1:before { content: '\e85c'; } /* '' */
 .wt-install:before { content: '\e85d'; } /* '' */
 .wt-th-large:before { content: '\e85e'; } /* '' */
 .wt-th:before { content: '\e85f'; } /* '' */
@@ -212,6 +212,11 @@
 .wt-tools:before { content: '\e8d2'; } /* '' */
 .wt-lamp:before { content: '\e8d3'; } /* '' */
 .wt-zoom-in:before { content: '\e8d4'; } /* '' */
+.wt-smile:before { content: '\eb0a'; } /* '' */
+.wt-pdf:before { content: '\eb0b'; } /* '' */
+.wt-inbox:before { content: '\eb0c'; } /* '' */
+.wt-attachment:before { content: '\eb0d'; } /* '' */
+.wt-photo-fill:before { content: '\eb0e'; } /* '' */
 .wt-android-search:before { content: '\f1c3'; } /* '' */
 .wt-android-contact:before { content: '\f209'; } /* '' */
 .wt-android-chat:before { content: '\f266'; } /* '' */
