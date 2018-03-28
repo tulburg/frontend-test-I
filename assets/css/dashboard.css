@@ -138,6 +138,9 @@ input, button {
   width: 70%;
   border-right: 1px solid #e6e6e6; }
 
+.board .content .left > .post:first-child {
+  margin-top: 40px; }
+
 .board .content .right {
   width: 30%; }
 
@@ -158,7 +161,7 @@ input, button {
   width: 100%;
   border-radius: 25%; }
 
-.post .bobble {
+.post .bubble {
   position: relative;
   margin-left: 15px;
   border: 1px solid #f2f2f2;
@@ -166,12 +169,12 @@ input, button {
   font-size: 13px;
   color: #999999; }
 
-.post .bobble.left {
+.post .bubble.left {
   margin-right: 200px;
   border-radius: 4px;
   width: calc(100% - 60px); }
 
-.post .bobble.left::after {
+.post .bubble.left::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -181,7 +184,7 @@ input, button {
   width: 10px;
   transform: rotateZ(-45deg); }
 
-.post .bobble.left::before {
+.post .bubble.left::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -191,13 +194,13 @@ input, button {
   width: 10px;
   transform: rotateZ(-45deg); }
 
-.post .bobble.right {
+.post .bubble.right {
   margin-left: 200px;
   border-radius: 4px;
   width: calc(100% - 80px);
   margin-right: 15px; }
 
-.post .bobble.right::after {
+.post .bubble.right::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -207,7 +210,7 @@ input, button {
   width: 10px;
   transform: rotateZ(-45deg); }
 
-.post .bobble.right::before {
+.post .bubble.right::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -218,7 +221,7 @@ input, button {
   transform: rotateZ(-45deg); }
 
 .datetime-left {
-  margin: 0px 0px 20px 60px;
+  margin: 0px 0px 20px 70px;
   color: #b3b3b3;
   font-size: 12px; }
 
@@ -227,12 +230,47 @@ input, button {
   color: #b3b3b3;
   font-size: 12px; }
 
-.post .bobble a {
+.post .bubble a {
   font-size: inherit;
   font-weight: inherit;
   padding: 0px;
   font-family: inherit;
   color: #1892F4; }
+
+.post .bubble .collage {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  text-align: left; }
+
+.post .bubble .collage .item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  display: inline-block; }
+
+.post .bubble .collage .item img {
+  border-radius: 5px;
+  max-width: 100%; }
+
+.post .bubble .collage .item .overlay {
+  transition: all .4s ease-in-out;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 15, 50, 0.7);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0; }
+
+.post .bubble .collage .item:hover > .overlay {
+  opacity: 1; }
 
 button.blue {
   background-color: #1892F4; }
