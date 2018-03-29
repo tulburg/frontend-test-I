@@ -22,12 +22,17 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .sidebar .footer { background-color: $bg-white; position: absolute; bottom: 0px; left: 10px; width: 90%; height: auto; border-top: 1px solid darken($bg-white, 10%); }
 
 /* Board definition */
-.board { background-color: $bg-white; border: 1px solid darken($bg-white, 10%); border-radius: 3px; width: 1024px; height: 768px; margin-left: 260px; }
+.board { background-color: $bg-white; border: 1px solid darken($bg-white, 10%); border-radius: 3px; width: 1000px; height: 768px; margin-left: 260px; }
 .board .heading { font-size: 18px; font-weight: bold; color: lighten($color-black, 30%); padding: 10px 20px; border-bottom: 1px solid darken($bg-white, 10%); height: 45px; }
-.board .content { display: flex; width: 100%; height: calc(100% - 45px); overflow-y: scroll; }
-.board .content .left { width: 70%; border-right: 1px solid darken($bg-white, 10%); position: relative; }
+.board .heading .progress { float: right; width: 160px; text-align: center; }
+.board .heading .progress .detail { font-size: 13px; font-weight: 100; color: lighten($color-black, 60%); } 
+.board .heading .progress .detail span { color: lighten($color-black, 20%);  }
+.board .heading .progress .progress-bar { background-color: darken($bg-white, 10%); height: 6px; border-radius: 3px; margin-top: 3px; }
+.progress .progress-bar span { display: block; width: 40%; background-color: $app-green; height: 100%; border-radius: 3px; }
+.board .content { display: flex; width: 100%; height: calc(100% - 45px); }
+.board .content > .left { width: 72%; border-right: 1px solid darken($bg-white, 10%); position: relative; overflow-y: scroll; }
 .board .content .left > .post:first-child { margin-top: 40px; }
-.board .content .right { width: 30%; }
+.board .content > .right { width: 28%; overflow-y: scroll; padding: 20px; }
 
 .post { display: flex; margin: 10px; }
 .post .photo { width: 50px; height: 50px; margin-left: 10px; }
@@ -48,11 +53,11 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .post .bubble .collage .item img { border-radius: 5px; max-width: 100%; }
 .post .bubble .collage .item .overlay { transition: all .4s ease-in-out; position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; background-color: rgba(0,15,50,0.7); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: $color-white; opacity: 0; }
 .post .bubble .collage .item:hover > .overlay { opacity: 1; }
-.post .bubble .file { color: $app-blue; margin-top: 10px; }
+.post .bubble .file { color: $app-blue; margin-top: 10px; cursor: pointer; }
 .post .bubble .file span { color: darken($bg-white, 40%); margin-left: 10px; }
 
 
-.message-box { position: absolute; bottom: 10px; left: 15px; border: 1px solid darken($bg-white, 10%); border-radius: 5px; width: calc(100% - 30px); }
+.message-box { position: absolute; bottom: 10px; left: 15px; border: 1px solid darken($bg-white, 10%); border-radius: 5px; width: calc(100% - 30px); background-color: $bg-white; }
 .message-box textarea { width: calc(100% - 20px); height: calc(100% - 50px); padding: 10px; background-color: transparent; outline: 0px; resize: none; }
 .message-box .action-pane { display: flex; }
 .message-box .action-pane .actions { width: 40%; flex: 1; align-self: flex-start; margin-top: 10px; margin-left: 10px; }
@@ -65,7 +70,12 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .marker span { position: absolute; text-transform: uppercase; background-color: inherit; padding: 0px 20px; }
 .marker.new span { color: $color-red; font-size: 12px; letter-spacing: 3px; }
 
-
+ul.tabs { list-style: none; display: flex; }
+ul.tabs li { display: inline-flex; flex: 1; border-bottom: 1px solid darken($bg-white, 15%); text-align: center; }
+ul.tabs li:hover { border-bottom: 1px solid $app-blue; }
+ul.tabs li.active { border-bottom: 1px solid $app-blue; color: $app-blue; }
+ul.tabs li a { font-size: 12px; font-family: inherit; font-weight: 100; padding: 2px 5px; text-align: center; display: block; width: 100%; }
+ul.tabs > li:first-child a, li:last-child a{ width: auto; display: block; }
 
 button.blue { @include darken_hover_active($app-blue); }
 button.sm-font { font-size: 12px; }

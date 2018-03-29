@@ -116,7 +116,7 @@ input, button {
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
-  width: 1024px;
+  width: 1000px;
   height: 768px;
   margin-left: 260px; }
 
@@ -128,22 +128,50 @@ input, button {
   border-bottom: 1px solid #e6e6e6;
   height: 45px; }
 
+.board .heading .progress {
+  float: right;
+  width: 160px;
+  text-align: center; }
+
+.board .heading .progress .detail {
+  font-size: 13px;
+  font-weight: 100;
+  color: #999999; }
+
+.board .heading .progress .detail span {
+  color: #333333; }
+
+.board .heading .progress .progress-bar {
+  background-color: #e6e6e6;
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 3px; }
+
+.progress .progress-bar span {
+  display: block;
+  width: 40%;
+  background-color: #1fc473;
+  height: 100%;
+  border-radius: 3px; }
+
 .board .content {
   display: flex;
   width: 100%;
-  height: calc(100% - 45px);
-  overflow-y: scroll; }
+  height: calc(100% - 45px); }
 
-.board .content .left {
-  width: 70%;
+.board .content > .left {
+  width: 72%;
   border-right: 1px solid #e6e6e6;
-  position: relative; }
+  position: relative;
+  overflow-y: scroll; }
 
 .board .content .left > .post:first-child {
   margin-top: 40px; }
 
-.board .content .right {
-  width: 30%; }
+.board .content > .right {
+  width: 28%;
+  overflow-y: scroll;
+  padding: 20px; }
 
 .post {
   display: flex;
@@ -275,7 +303,8 @@ input, button {
 
 .post .bubble .file {
   color: #1892F4;
-  margin-top: 10px; }
+  margin-top: 10px;
+  cursor: pointer; }
 
 .post .bubble .file span {
   color: #999999;
@@ -287,7 +316,8 @@ input, button {
   left: 15px;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
-  width: calc(100% - 30px); }
+  width: calc(100% - 30px);
+  background-color: #ffffff; }
 
 .message-box textarea {
   width: calc(100% - 20px);
@@ -342,6 +372,36 @@ input, button {
   color: #ef4056;
   font-size: 12px;
   letter-spacing: 3px; }
+
+ul.tabs {
+  list-style: none;
+  display: flex; }
+
+ul.tabs li {
+  display: inline-flex;
+  flex: 1;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center; }
+
+ul.tabs li:hover {
+  border-bottom: 1px solid #1892F4; }
+
+ul.tabs li.active {
+  border-bottom: 1px solid #1892F4;
+  color: #1892F4; }
+
+ul.tabs li a {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 100;
+  padding: 2px 5px;
+  text-align: center;
+  display: block;
+  width: 100%; }
+
+ul.tabs > li:first-child a, li:last-child a {
+  width: auto;
+  display: block; }
 
 button.blue {
   background-color: #1892F4; }
