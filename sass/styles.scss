@@ -83,7 +83,7 @@ h3.heading span, .h3.heading span, h4.heading span, .h4.heading span,
 h5.heading span, .h5.heading span, h5.heading span, .h5.heading span {@include setfont($normal-font, "normal", "Circular");font-weight:400;display:block;color:inherit;font-size:$normal-font;opacity:0.7;padding-left:1px;}
 
 /* Links Definitino */
-a,.a{padding:4px 8px;text-decoration:none;@include setfont($normal-font, "normal", "Circular Light");font-weight:bold;color:inherit;}
+a,.a{padding:4px 8px;text-decoration:none;color:inherit;}
 a.underline:hover, .a.underline:hover{text-decoration:underline;}
 a.red,.a.red{@include darken_color_hover($bg-red);}
 a.orange,.a.orange{@include darken_color_hover($bg-orange);}
@@ -92,7 +92,7 @@ a.white,.a.white{@include darken_color_hover($bg-white);}
 a.grey,.a.grey{@include darken_color_hover($bg-grey);}
 a.blue,.a.blue{@include darken_color_hover($bg-blue);}
 a.small,.a.small{font-size:$small-font;padding:2px 6px;}
-a.clear { padding: 0px; }
+a.clear { padding: 0px; font-weight: 100; }
 
 
 /* Button Definition */

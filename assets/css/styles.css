@@ -298,10 +298,6 @@ h5.heading span, .h5.heading span, h5.heading span, .h5.heading span {
 a, .a {
   padding: 4px 8px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: "normal";
-  font-family: "Circular Light", helvetica, san-serif, arial;
-  font-weight: bold;
   color: inherit; }
 
 a.underline:hover, .a.underline:hover {
@@ -342,7 +338,8 @@ a.small, .a.small {
   padding: 2px 6px; }
 
 a.clear {
-  padding: 0px; }
+  padding: 0px;
+  font-weight: 100; }
 
 /* Button Definition */
 button, .button {

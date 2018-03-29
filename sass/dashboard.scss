@@ -28,7 +28,7 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .board .heading .progress .detail { font-size: 13px; font-weight: 100; color: lighten($color-black, 60%); } 
 .board .heading .progress .detail span { color: lighten($color-black, 20%);  }
 .board .heading .progress .progress-bar { background-color: darken($bg-white, 10%); height: 6px; border-radius: 3px; margin-top: 3px; }
-.progress .progress-bar span { display: block; width: 40%; background-color: $app-green; height: 100%; border-radius: 3px; }
+.board .heading .back-btn { float: left; width: 40px; cursor: pointer; margin-left: 10px; }
 .board .content { display: flex; width: 100%; height: calc(100% - 45px); }
 .board .content > .left { width: 70%; border-right: 1px solid darken($bg-white, 10%); position: relative; overflow-y: scroll; }
 .board .content .left > .post:first-child { margin-top: 40px; }
@@ -86,6 +86,14 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .right .footer > .summary .collage { margin-top: 10px; }
 .right .footer > .summary .collage img { width: 25px; height: 25px; border-radius: 6px; display: inline-block; margin-right: 5px; }
 
+
+
+
+
+div.alert { padding: 15px 10px; font-size: 12px; text-align: center; color: darken($color-white, 25%); }
+div.alert span { float: right; color: lighten($color-black, 10%); }
+
+div.progress .progress-bar span { display: block; width: 40%; background-color: $app-green; height: 100%; border-radius: 3px; }
 
 div.checkbox input { display: none; }
 div.checkbox i { visibility: hidden; font-size: 10px; color: $bg-white; }
