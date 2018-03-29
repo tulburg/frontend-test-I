@@ -228,6 +228,7 @@
 .wt-inbox { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb0c;&nbsp;'); }
 .wt-attachment { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb0d;&nbsp;'); }
 .wt-photo-fill { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb0e;&nbsp;'); }
+.wt-padlock { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb0f;&nbsp;'); }
 .wt-android-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1c3;&nbsp;'); }
 .wt-android-contact { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf209;&nbsp;'); }
 .wt-android-chat { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf266;&nbsp;'); }

@@ -217,6 +217,7 @@
 .wt-inbox:before { content: '\eb0c'; } /* '' */
 .wt-attachment:before { content: '\eb0d'; } /* '' */
 .wt-photo-fill:before { content: '\eb0e'; } /* '' */
+.wt-padlock:before { content: '\eb0f'; } /* '' */
 .wt-android-search:before { content: '\f1c3'; } /* '' */
 .wt-android-contact:before { content: '\f209'; } /* '' */
 .wt-android-chat:before { content: '\f266'; } /* '' */

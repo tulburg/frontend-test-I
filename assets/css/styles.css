@@ -341,6 +341,9 @@ a.small, .a.small {
   font-size: 12px;
   padding: 2px 6px; }
 
+a.clear {
+  padding: 0px; }
+
 /* Button Definition */
 button, .button {
   border-radius: 4px;

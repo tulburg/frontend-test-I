@@ -92,6 +92,7 @@ a.white,.a.white{@include darken_color_hover($bg-white);}
 a.grey,.a.grey{@include darken_color_hover($bg-grey);}
 a.blue,.a.blue{@include darken_color_hover($bg-blue);}
 a.small,.a.small{font-size:$small-font;padding:2px 6px;}
+a.clear { padding: 0px; }
 
 
 /* Button Definition */

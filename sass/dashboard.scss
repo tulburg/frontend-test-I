@@ -30,10 +30,12 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .board .heading .progress .progress-bar { background-color: darken($bg-white, 10%); height: 6px; border-radius: 3px; margin-top: 3px; }
 .progress .progress-bar span { display: block; width: 40%; background-color: $app-green; height: 100%; border-radius: 3px; }
 .board .content { display: flex; width: 100%; height: calc(100% - 45px); }
-.board .content > .left { width: 72%; border-right: 1px solid darken($bg-white, 10%); position: relative; overflow-y: scroll; }
+.board .content > .left { width: 70%; border-right: 1px solid darken($bg-white, 10%); position: relative; overflow-y: scroll; }
 .board .content .left > .post:first-child { margin-top: 40px; }
-.board .content > .right { width: 28%; overflow-y: scroll; padding: 20px; }
+.board .content > .right { position: relative; width: 30%; overflow-y: scroll; padding: 20px; }
+.board .content > .right .footer { position: absolute; bottom: 20px; left: 15px; width: calc(100% - 45px); }
 
+/* post definition */
 .post { display: flex; margin: 10px; }
 .post .photo { width: 50px; height: 50px; margin-left: 10px; }
 .post .photo.photo-right { margin-right: 10px; margin-left: 0px; }
@@ -55,8 +57,7 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .post .bubble .collage .item:hover > .overlay { opacity: 1; }
 .post .bubble .file { color: $app-blue; margin-top: 10px; cursor: pointer; }
 .post .bubble .file span { color: darken($bg-white, 40%); margin-left: 10px; }
-
-
+/* message-box definition */
 .message-box { position: absolute; bottom: 10px; left: 15px; border: 1px solid darken($bg-white, 10%); border-radius: 5px; width: calc(100% - 30px); background-color: $bg-white; }
 .message-box textarea { width: calc(100% - 20px); height: calc(100% - 50px); padding: 10px; background-color: transparent; outline: 0px; resize: none; }
 .message-box .action-pane { display: flex; }
@@ -64,17 +65,40 @@ input,button { @include setfont($normal-font, normal, "Circular"); }
 .message-box .action-pane .actions a { padding: 0px; @include darken_color_hover(lighten($app-blue, 20%)); }
 .message-box .action-pane button { align-self: flex-end; margin-bottom: 10px; padding: 8px 25px; }
 
-
 .marker { display: flex; align-items: center; justify-content: center; margin: 20px auto; height: 20px; background-color: $bg-white; border: 0px; }
 .marker .separator { background-color: darken($bg-white, 10%); height: 1px; width: 60%; }
 .marker span { position: absolute; text-transform: uppercase; background-color: inherit; padding: 0px 20px; }
 .marker.new span { color: $color-red; font-size: 12px; letter-spacing: 3px; }
 
+.right .summary { margin-top: 20px; border-top: 1px solid lighten($app-light-blue, 20%); background-color: darken($bg-white, 2%); padding: 10px 15px; font-size: 12px; color: $app-light-blue; margin-bottom: 10px; }
+.right .summary > .title { float: right; color: $app-blue; }
+.right .task { display: flex; min-height: 50px; margin:10px 20px; border-radius: 4px; border: 2px solid transparent; padding: 5px; margin-right: 0px; cursor: default; } 
+.right .task:hover { border-color: lighten($app-light-blue, 22%); }
+.right .task .checkbox { align-self: flex-start; width: 18px; margin-right: 10px; }
+.right .task .label { width: calc(100% - 28px); color: darken($bg-white, 45%); font-size: 12px; }
+.right .task .label span { background-color: $bg-red; color: $color-white; padding: 0px 4px; font-size: 10px; }
+.right .task .label span.alt { background-color: $app-light-blue; opacity: 0.5; margin-top: 10px; }
+.right .task .label p { display: inline; margin-right: 5px; line-height: 1.6; }
+.right .task .label p.alt { color: lighten($color-black, 35%); display: block; }
+.right .task .label.checked p { text-decoration: line-through; }
+.right .task .label i { margin-left: 5px; color: $app-light-blue;; }
+.right .footer > .summary .header { font-size: 12px; font-weight: 600; color: lighten($color-black, 15%); }
+.right .footer > .summary .collage { margin-top: 10px; }
+.right .footer > .summary .collage img { width: 25px; height: 25px; border-radius: 6px; display: inline-block; margin-right: 5px; }
+
+
+div.checkbox input { display: none; }
+div.checkbox i { visibility: hidden; font-size: 10px; color: $bg-white; }
+div.checkbox { border: 2px solid lighten($app-light-blue, 22%); border-radius: 4px; height: 18px; width: 18px; transition: all .2s ease-in-out; cursor: pointer; display: flex; align-items: center; }
+div.checkbox:hover { border-color: $app-blue; }
+div.checkbox.checked { @include darken_hover($app-blue); border-color: $app-blue; }
+div.checkbox.checked > i { visibility: visible; }
+
 ul.tabs { list-style: none; display: flex; }
 ul.tabs li { display: inline-flex; flex: 1; border-bottom: 1px solid darken($bg-white, 15%); text-align: center; }
 ul.tabs li:hover { border-bottom: 1px solid $app-blue; }
 ul.tabs li.active { border-bottom: 1px solid $app-blue; color: $app-blue; }
-ul.tabs li a { font-size: 12px; font-family: inherit; font-weight: 100; padding: 2px 5px; text-align: center; display: block; width: 100%; }
+ul.tabs li a { font-size: 13px; font-family: inherit; font-weight: 100; padding: 2px 5px; text-align: center; display: block; width: 100%; }
 ul.tabs > li:first-child a, li:last-child a{ width: auto; display: block; }
 
 button.blue { @include darken_hover_active($app-blue); }
