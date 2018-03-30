@@ -459,6 +459,79 @@ input, button {
   display: inline-block;
   margin-right: 5px; }
 
+.assignment {
+  display: flex;
+  margin: 20px 20px 50px 60px; }
+
+.assignment .action {
+  display: table;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  background-color: #edf8fa;
+  position: relative; }
+
+.assignment .action > div:first-child {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+  font-size: 10px; }
+
+.assignment .action p {
+  color: #333333;
+  font-size: 12px; }
+
+.assignment .action span {
+  color: #9db7cc; }
+
+.assignment .tags {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 3px 2px;
+  margin-left: 40px;
+  width: calc(80% - 200px);
+  max-height: 100px;
+  align-self: center;
+  position: relative; }
+
+.assignment .tags .tag {
+  background-color: #dbeefd;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #1892F4;
+  height: 26px;
+  text-align: center; }
+
+.assignment .tags .tag span {
+  float: right;
+  font-size: 8px;
+  line-height: 2; }
+
+.assignment .tag-line {
+  font-size: 10px;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 100%;
+  text-align: center; }
+
+.assignment .tag-line.alt {
+  left: 100%;
+  width: auto;
+  top: 15px;
+  bottom: auto;
+  min-width: 150px;
+  color: #bfbfbf; }
+
+.assignment .action > div:first-child i {
+  color: #4d4d4d; }
+
+.assignment .action > div:first-child i.rt::before {
+  transform: rotateZ(-45deg); }
+
 div.alert {
   padding: 15px 10px;
   font-size: 12px;
